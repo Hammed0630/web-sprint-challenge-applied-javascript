@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // STEP 2: Create tabs
 // -----------------------
 // Using axios send a GET request to the address: https://lambda-times-backend.herokuapp.com/topics
@@ -9,14 +10,36 @@
 //    <div class="tab">topic here</div>
 //
 // NOTE: you do _not_ need to install axios as it's included in the HTML via script element
+const topicElement = document.querySelector(".topics");
 
 axios.get("https://lambda-times-backend.herokuapp.com/topics")
-.then(response => {
+.then(function (response) {
+    console.log(response)
     response.data.topics.forEach( (item) => {
-        const newDiv = document.createElement('div')
+        let newDiv = document.createElement('div')
         newDiv.classList.add("tabs")
-        newDiv.textContent = "item"
+        newDiv.textContent = item
+       topicElement.appendChild(newDiv);
 
     })
     
 })
+
+
+
+// const topicElement = document.querySelector(".topics");
+// axios
+//   .get(topics)
+//   .then(function (response) {
+//     const Array = response.data.topics;
+//     console.log(response.data.topics);
+//     Array.forEach(function (data) {
+//       const newTab = document.createElement("div");
+//       newTab.classList.add("tab");
+//       newTab.textContent = data;
+//       topicElement.appendChild(newTab);
+//     });
+//   })
+//   .catch(function (error) {
+//     console.log(error);
+//   });

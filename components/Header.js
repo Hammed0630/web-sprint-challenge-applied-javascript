@@ -18,9 +18,7 @@ function Header( info ) {
          temperature = document.createElement('span')
 
 
-    head.append(date)
-    head.append(title)
-    head.append(temperature)
+   
 
     head.classList.add("header")
     date.classList.add("date")
@@ -30,9 +28,12 @@ function Header( info ) {
     title.textContent = "Lambda Times"
     temperature.textContent = "98°"
  
-
+    head.append(date)
+    head.append(title)
+    head.append(temperature)
+    
     return head;
 }
 
     const titleCom = Header();
-    document.querySelector(".container-right").appendChild(titleCom);
+    document.querySelector(".header-container").appendChild(titleCom);
