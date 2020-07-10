@@ -27,19 +27,3 @@ axios.get("https://lambda-times-backend.herokuapp.com/topics")
 
 
 
-// const topicElement = document.querySelector(".topics");
-// axios
-//   .get(topics)
-//   .then(function (response) {
-//     const Array = response.data.topics;
-//     console.log(response.data.topics);
-//     Array.forEach(function (data) {
-//       const newTab = document.createElement("div");
-//       newTab.classList.add("tab");
-//       newTab.textContent = data;
-//       topicElement.appendChild(newTab);
-//     });
-//   })
-//   .catch(function (error) {
-//     console.log(error);
-//   });
